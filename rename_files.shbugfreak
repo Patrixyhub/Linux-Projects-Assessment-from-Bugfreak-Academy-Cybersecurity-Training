@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd bugfreakwork
+
+#list the content of the directory
+ ls
+
+ # Loop through each file with .txt extension
+ for file in *.txt; do
+
+   # Get the filename without extension
+        filename=$(basename "$file" .txt)
+   
+    # Rename the file with .md extension
+        mv "$file" "$filename.md"
+done

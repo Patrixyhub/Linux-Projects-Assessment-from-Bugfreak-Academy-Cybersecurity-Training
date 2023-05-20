@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# upgrade package lists
+   echo "updating package lists..."     
+    sudo apt update
+
+#   upgrade installed packages
+      echo "upgrading installed packages..."
+        sudo apt upgrade -y
+
+#       install security updates
+          echo "installing security updates..."
+            sudo apt-get dist-upgrade -y
+
+#  clean up 
+    echo "cleaning up..."
+     sudo apt autoremove -y
+   sudo apt autoclean 
+
+# reboot the system 
+    # echo "rebooting the system..."
+  #sudo reboot
+
+echo "security updates installation completed!"
